@@ -13,16 +13,14 @@ app.get("/", function(req,res){
  if (today.getDay()===0 || today.getDay===6){
      req.write("wow! Its a weekend");
  } else{
-     res.write("<p>It isn't the weekend.</p>")
-     res.write("God! I have to work!");
-     res.send();
+    res.sendFile(__dirname + "/index.html");
  }
     
 
 });     
 
-// res.write() allows you to send over multiple pieces of data, here res.send() alone will not work.
-// At the end of res.write(), res.send() is called.
+// res.sendFile() is used to send a html file.
+
 
 
 
