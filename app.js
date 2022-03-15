@@ -11,13 +11,18 @@ app.get("/", function(req,res){
                                  
 
  if (today.getDay()===0 || today.getDay===6){
-     console.log("wow! Its a weekend");
+     req.write("wow! Its a weekend");
  } else{
-     res.send("God! I have to work");
+     res.write("<p>It isn't the weekend.</p>")
+     res.write("God! I have to work!");
+     res.send();
  }
     
 
-});                          
+});     
+
+// res.write() allows you to send over multiple pieces of data, here res.send() alone will not work.
+// At the end of res.write(), res.send() is called.
 
 
 
