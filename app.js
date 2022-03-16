@@ -1,10 +1,9 @@
-// Starting files
 const express = require("express");
 const bodyParser = require("body-parser");
 
 const app = express();                // app is an instance of express
 
-app.set('view engine', 'ejs');
+app.set('view engine', 'ejs'); //This line of code tells our app which is generated using express to use ejs as its "view engine". 
 
 app.get("/", function(req,res){
 
