@@ -8,15 +8,8 @@
 </head>
 <body>
 
-    <!--'Scriptlet' tag, for control-flow, no output
-    This scriplet tag is added around any part of the code that isn't html.
-    These scriplet tags works on a line by line basis -->
+      <h1> <%= kindOfDay %> </h1>
 
-    <% if( kindOfDay === "Saturday" || kindOfDay === "Sunday" ){ %>
-    <h1 style="color:red"><%= kindOfDay %> ToDo-List</h1>
-
-    <% } else { %>
-        <h1 styel="color:blue"><%= kindOfDay %> ToDo-List</h1>
-    <% } %>
+  
 </body>
 </html>
