@@ -10,20 +10,26 @@ Options key examples:
 1.day:
 The representation of the day.
 Possible values are "numeric", "2-digit".
+
 2.weekday:
 The representation of the weekday.
 Possible values are "narrow", "short", "long".
+
 3.year:
 The representation of the year.
 Possible values are "numeric", "2-digit".
+
 4.month:
 The representation of the month.
 Possible values are "numeric", "2-digit", "narrow", "short", "long".
+
 5.hour:
 The representation of the hour.
 Possible values are "numeric", "2-digit".
+
 6.minute: The representation of the minute.
 Possible values are "numeric", "2-digit".
+
 7.second:
 The representation of the second.
 Possible values are "numeric", 2-digit".
