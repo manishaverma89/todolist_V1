@@ -7,7 +7,8 @@ let items= ["buy food","cook food","Eat Food"];
 app.set('view engine', 'ejs'); //This line of code tells our app which is generated using express to use ejs as its "view engine". 
 
 app.use(bodyParser.urlencoded({extended:true})); 
-app.use(express.static("public"));      //created to add sattic files like css,javascript,images
+                     
+app.use(express.static("public"));      //public folder is created to add sattic files like css,javascript,images
 
 
 app.get("/", function(req,res){
