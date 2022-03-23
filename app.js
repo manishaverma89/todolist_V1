@@ -47,6 +47,7 @@ app.get("/work", function (req, res) {
 
 });
 // About Route
+
  app.get("/about",function(req,res){
    res.render("about");
  });
