@@ -30,7 +30,9 @@ app.post("/", function (req, res) {
   if(req.body.list === "Work-List"){
     workItems.push(item);
     res.redirect("/work")
-  }else{
+  }
+  
+  else{
       items.push(item);
       res.redirect("/");
   }
@@ -44,6 +46,9 @@ app.get("/work", function (req, res) {
   res.render("list", {listTitle: "Work-List" , newListItems:workItems});
 
 });
+ app.get("/about",function(req,res){
+   res.render("about");
+ });
 
 
 app.listen(3000, function () {
