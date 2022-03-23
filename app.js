@@ -5,6 +5,8 @@ const app = express(); // app is an instance of express
 
 let items = ["buy food", "cook food", "Eat Food"];
 let workItems = [];
+let officeItems = [];
+
 app.set("view engine", "ejs"); //This line of code tells our app which is generated using express to use ejs as its "view engine".
 
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -31,7 +33,10 @@ app.post("/", function (req, res) {
     workItems.push(item);
     res.redirect("/work")
   }
-  
+  else if(req.body.list === "Office-Work"){
+    officeItems.push(item);
+    res.redirect("/office");
+  }
   else{
       items.push(item);
       res.redirect("/");
@@ -46,15 +51,16 @@ app.get("/work", function (req, res) {
   res.render("list", {listTitle: "Work-List" , newListItems:workItems});
 
 });
-// About Route
 
- app.get("/about",function(req,res){
-   res.render("about");
- });
 
 //About Page
 app.get("/about",function(req,res){
 res.render("about");
+});
+
+// Office work
+app.get("/office", function(req,res) {
+res.render("list", {listTitle: "Office-Work", newListItems: officeItems});
 });
 
 
