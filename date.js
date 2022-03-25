@@ -1,6 +1,6 @@
-module.exports.getDate = getDate;
+exports.getDate = function(){    // An Anonymous function
 
-function getDate(){
+// var getDate = function(){
 
 let today = new Date(); //Javascript Date objects, new Date() will give the current date.
 
@@ -10,13 +10,13 @@ let today = new Date(); //Javascript Date objects, new Date() will give the curr
     month: "long",
   };
 
-  let day = today.toLocaleString("en-US", options);
-  return day;
+  return day = today.toLocaleString("en-US", options);
+  
 }
 
-module.exports.getDay = getDay;
+exports.getDay = function(){
 
-function getDay(){
+// var getDay = function (){
 
     let today = new Date(); //Javascript Date objects, new Date() will give the current date.
     
@@ -24,7 +24,7 @@ function getDay(){
         weekday: "long" 
       };
     
-      let day = today.toLocaleString("en-US", options);
-      return day;
+      return day = today.toLocaleString("en-US", options);
+      
     }
     
